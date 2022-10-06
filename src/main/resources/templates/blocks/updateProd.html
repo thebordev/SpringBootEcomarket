@@ -1,0 +1,12 @@
+<div th:fragment="product" class="container mt-5 mb-5">
+    <h1>Обновить продукт</h1>
+    <form action="/shopAdd" th:object="${ProductForm}" method="post" enctype="multipart/form-data">
+        <input type="text" th:value="${ProductForm.name}" th:field="*{name}" name="name" placeholder="Введите название товара" class="form-control"><br>
+        <textarea type="full_text" th:field="*{information}" name="information" placeholder="Введите описание товара" class="form-control"></textarea><br>
+        <input type="text" th:field="*{category}" name="category" placeholder="Введите категорию товара" class="form-control"><br>
+        <input type="text" th:field="*{amount}" name="amount" placeholder="Введите количество товара" class="form-control"><br>
+        <input type="text" th:field="*{price}" name="price" placeholder="Введите цену товара" class="form-control"><br>
+        <input type="text" th:field="*{status}" name="status" placeholder="Введите статус товара" class="form-control"><br>
+        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="update" type="submit" id="editProd">Обновить</button>
+    </form>
+</div>

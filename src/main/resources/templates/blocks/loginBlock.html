@@ -1,0 +1,11 @@
+<div th:fragment="login" class="container mt-5 mb-5">
+  <h1>Авторизация</h1>
+  <p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
+     th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"
+     class="text-danger">Ошибка авторизации</p>
+  <form action="/loginUp" method="post" enctype="multipart/form-data">
+    <input type="text" name="login" placeholder="Введите логин" class="form-control"><br>
+    <input type="text" name="password" placeholder="Введите пароль" class="form-control"><br>
+    <button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Авторизация</button>
+  </form>
+</div>

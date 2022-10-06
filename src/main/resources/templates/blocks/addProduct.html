@@ -1,0 +1,12 @@
+<div th:fragment="product" class="container mt-5 mb-5">
+    <h1>Добавление продукта</h1>
+    <form action="/shopAdd" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Введите название товара" class="form-control"><br>
+        <textarea type="full_text" name="information" placeholder="Введите описание товара" class="form-control"></textarea><br>
+        <input type="text" name="category" placeholder="Введите категорию товара" class="form-control"><br>
+        <input type="text" name="amount" placeholder="Введите количество товара" class="form-control"><br>
+        <input type="text" name="price" placeholder="Введите цену товара" class="form-control"><br>
+        <input type="text" name="status" placeholder="Введите статус товара" class="form-control"><br>
+        <button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Добавить</button>
+    </form>
+</div>
